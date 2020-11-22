@@ -17,7 +17,7 @@ html = """
 """
 
 for name, city, lat, lon in zip(rest_names, rest_cities, rest_lats, rest_lons):
-    iframe = folium.IFrame(html=html.format(name=name, city=city), width=130, height=80)
+    iframe = folium.IFrame(html=html.format(name=name, city=city), width=130, height=100)
     fg.add_child(folium.CircleMarker(location=[lat, lon], popup=folium.Popup(iframe),
                                      color='grey',
                                      fill_opacity=100,
